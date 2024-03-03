@@ -18,13 +18,13 @@ int main(){
 	}
 	x=RunNumber(A,N);
 	y=Checksum(A,N);
-	printf("\nСерий:%d",x);
-	printf("\nСумма:%d\n",y);
+	printf("\nГ‘ГҐГ°ГЁГ©:%d",x);
+	printf("\nГ‘ГіГ¬Г¬Г :%d\n",y);
 	selectsort(A,N);
 	x=RunNumber(A,N);
 	y=Checksum(A,N);
-	printf("\nСерий:%d",x);
-	printf("\nСумма:%d\n",y);
+	printf("\nГ‘ГҐГ°ГЁГ©:%d",x);
+	printf("\nГ‘ГіГ¬Г¬Г :%d\n",y);
 	FillInc(A,N);
 	selectsort(A,N);
 	FillDec(A,N);
