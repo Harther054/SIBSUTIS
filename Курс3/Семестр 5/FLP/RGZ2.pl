@@ -1,23 +1,23 @@
-% Загрузка файла
+% Р—Р°РіСЂСѓР·РєР° С„Р°Р№Р»Р°
 read_file(File, Text) :-
     open(File, read, Stream),
     read_line_to_codes(Stream, Codes),
     close(Stream),
     atom_codes(Text, Codes).
 
-% Перестановка слов в обратном порядке
+% РџРµСЂРµСЃС‚Р°РЅРѕРІРєР° СЃР»РѕРІ РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ
 reverse_words(Text, ReversedText) :-
     atomic_list_concat(Words, ' ', Text),
     reverse(Words, ReversedWords),
     atomic_list_concat(ReversedWords, ' ', ReversedText).
 
-% Сохранение результата в файл
+% РЎРѕС…СЂР°РЅРµРЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° РІ С„Р°Р№Р»
 save_file(File, Text) :-
     open(File, write, Stream),
     write(Stream, Text),
     close(Stream).
 
-% Главная функция
+% Р“Р»Р°РІРЅР°СЏ С„СѓРЅРєС†РёСЏ
 main :-
     read_file('input.txt', Text),
     reverse_words(Text, ReversedText),
